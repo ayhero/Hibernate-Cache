@@ -1,7 +1,8 @@
-package com.test;
+package com.optimisticlock;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import com.threads.UpdateUser;
+
+import com.optimisticlock.threads.UpdateUser;
 
 /**
  * 测试乐观锁-version

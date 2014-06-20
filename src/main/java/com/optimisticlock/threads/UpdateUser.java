@@ -1,4 +1,4 @@
-package com.threads;
+package com.optimisticlock.threads;
 
 
 import javax.annotation.Resource;
