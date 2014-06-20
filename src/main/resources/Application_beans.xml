@@ -15,6 +15,7 @@
 	default-lazy-init="false" default-autowire="byName">
 	<import resource="Application_dataSource.xml"/>
 	<import resource="Application_Hibernate.xml"/>
-	
+	<context:annotation-config/>
+	<context:component-scan base-package="com" />
 	
 </beans>
