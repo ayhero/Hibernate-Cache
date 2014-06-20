@@ -4,10 +4,16 @@ import java.util.*;
 
 import javax.persistence.*;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 @Entity
+/*
+ * 使用二级缓存
+ */
+@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
 public class Resc {
 
 	@Id

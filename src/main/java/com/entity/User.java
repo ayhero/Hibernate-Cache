@@ -13,23 +13,24 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Version;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.OptimisticLockType;
-/**
- * 使用hibernate的Eneity
+
+@Entity
+/*
+ * 使用hibernate的Entity
  * 当检查的字段为所有字段时，要加上dynamicUpdate=true配置
  * 其余情况不必配置dynamicUpdate属性
  * @author Memego-
  *
  */
-@Entity
-
 @org.hibernate.annotations.Entity(
 		dynamicUpdate=true,
 		optimisticLock = OptimisticLockType.ALL
 )
-
 public class User {
 
 	@Id

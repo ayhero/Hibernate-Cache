@@ -25,12 +25,16 @@
 	       <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
 	       <prop key="hibernate.hbm2ddl.auto">update</prop>
 	       <prop key="hibernate.show_sql">true</prop>
+	       <!-- 开启二级缓存 -->
+	       <prop key="hibernate.cache.use_second_level_cache">true</prop>
+		   <prop key="hibernate.cache.use_query_cache">true</prop>
+		   <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
 	     </props>
 	   </property>
  
-	   <!--指明使用标注的实体类-->
+	   <!-- 指明使用标注的实体类-->
 	   <property name="packagesToScan" value="com.entity" /> 
-   
+	   
    </bean>
 	
 </beans>

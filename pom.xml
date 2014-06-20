@@ -10,9 +10,9 @@
   
   <properties>
   	<spring.version>3.2.8.RELEASE</spring.version>
-  	<spring.security.version>3.2.3.RELEASE</spring.security.version>
-  	<ehcache.version>2.7.0</ehcache.version>
-  	<ehcache.spring.annotations.version>1.2.0</ehcache.spring.annotations.version>
+  	<ehcache.version>1.2</ehcache.version>
+  	<hibernate.version>4.2.0.Final</hibernate.version>
+ 	<commons-logging.version>1.1.1</commons-logging.version>
   </properties>
   
   <dependencies>
@@ -71,11 +71,11 @@
          <version>${spring.version}</version>  
      </dependency>  
      <dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-context-support</artifactId>
-	 <version>${spring.version}</version>  
-</dependency>
-         
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		 <version>${spring.version}</version>  
+	</dependency>
+    
      <dependency>  
          <groupId>org.springframework</groupId>  
          <artifactId>spring-beans</artifactId>  
@@ -100,8 +100,26 @@
         <dependency>  
             <groupId>org.hibernate</groupId>  
             <artifactId>hibernate-core</artifactId>  
-            <version>4.2.0.Final</version>  
-        </dependency>  
+            <version>${hibernate.version}</version>  
+        </dependency> 
+        <!-- ehcache缓存 --> 
+	    <dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>${ehcache.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-ehcache</artifactId>
+		  <version>${hibernate.version}</version>
+		</dependency>
+		<!-- commons_loging -->
+         <dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+		</dependency>
+		         
   </dependencies>
   <build>
     <finalName>hib_cache</finalName>
