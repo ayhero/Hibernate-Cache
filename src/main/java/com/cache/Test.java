@@ -15,7 +15,7 @@ public class Test {
 	 * 测试session级别的缓存
 	 */
 	public void testSessionCache(){
-		//org.springframework.cache.ehcache.EhCacheManagerFactoryBean
+		//net.sf.ehcache.config.CacheConfiguration
 		SessionCache ssc=(SessionCache) ac.getBean("sessionCache");
 		Thread t1=new Thread(ssc);
 		t1.start();
