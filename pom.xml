@@ -96,7 +96,7 @@
          <artifactId>spring-orm</artifactId>  
          <version>${spring.version}</version>  
      </dependency> 
-    <!-- hibernate -->  
+    	<!-- hibernate -->  
         <dependency>  
             <groupId>org.hibernate</groupId>  
             <artifactId>hibernate-core</artifactId>  
@@ -113,12 +113,13 @@
 		  <artifactId>hibernate-ehcache</artifactId>
 		  <version>${hibernate.version}</version>
 		</dependency>
+		<!-- 
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.7</version>
 		</dependency>
-				
+		 -->		
 		<!-- commons_loging -->
          <dependency>
 			<groupId>commons-logging</groupId>

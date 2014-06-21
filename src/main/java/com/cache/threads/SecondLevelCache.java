@@ -2,6 +2,7 @@ package com.cache.threads;
 
 import javax.annotation.Resource;
 
+import org.hibernate.CacheMode;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -25,7 +26,6 @@ public class SecondLevelCache extends Thread {
 		System.out.println("rs.getRes_string:"+rs1.getRes_string());
 		tx1.commit();
 		session1.close();
-		System.out.println("000------000");
 		
 		//事务2
 		Session session2=sessionFactory.openSession();
@@ -34,9 +34,6 @@ public class SecondLevelCache extends Thread {
 		System.out.println("rs.getRes_string:"+rs2.getRes_string());
 		tx2.commit();
 		session2.close();
-		System.out.println("000------000");
-		//判断两个事务分别获得的User对象是否同一个
-		System.out.println("rs1==rs2?:"+(rs1==rs2));
 		
 		
 	}

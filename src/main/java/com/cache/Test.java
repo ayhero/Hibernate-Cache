@@ -20,7 +20,9 @@ public class Test {
 		Thread t1=new Thread(ssc);
 		t1.start();
 	}
-	
+	/**
+	 * 测试ehcache二级缓存
+	 */
 	public void testSecondLevelCache(){
 		SecondLevelCache slc=(SecondLevelCache) ac.getBean("secondLevelCache");
 		Thread t1=new Thread(slc);

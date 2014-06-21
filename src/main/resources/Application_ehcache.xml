@@ -13,7 +13,7 @@
             diskExpiryThreadIntervalSeconds="100"  
             memoryStoreEvictionPolicy="LRU"  
             />  
-    <cache name="com.entity.user"  
+    <cache name="query"  
            maxElementsInMemory="3000"  
            eternal="true"  
            overflowToDisk="true"  

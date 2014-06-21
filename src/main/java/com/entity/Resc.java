@@ -13,7 +13,7 @@ import org.hibernate.annotations.FetchMode;
 /*
  * 使用二级缓存
  */
-@Cache(usage=CacheConcurrencyStrategy.READ_WRITE)
+@Cache(region="query",usage=CacheConcurrencyStrategy.READ_WRITE)
 public class Resc {
 
 	@Id
@@ -42,6 +42,7 @@ public class Resc {
 	@Fetch(FetchMode.SELECT)
 	@JoinTable(joinColumns=@JoinColumn(name="resc_id",nullable=false),
 				name="Resc_Role",inverseJoinColumns=@JoinColumn(name="role_id"))
+	@Cache(region="query",usage=CacheConcurrencyStrategy.READ_WRITE)
 	private Set<Role> roles;
 	
 	public Set<Role> getRoles() {
